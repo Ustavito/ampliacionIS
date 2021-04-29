@@ -34,6 +34,7 @@ class BookServiceTest {
 		//Given
 		when(repository.save(book)).thenReturn(book);
 		when(book.getTitle()).thenReturn("Eragon");
+		when(book.getDescription()).thenReturn("Descripcion de libro");
 		
 		//When
 		service.save(book);
@@ -48,6 +49,7 @@ class BookServiceTest {
 		//Given
 		when(book.getId()).thenReturn(10L);
 		when(book.getTitle()).thenReturn("Eldest");
+		when(book.getDescription()).thenReturn("Descripcion de libro");
 		when(repository.existsById(10L)).thenReturn(true);
 		when(repository.save(book)).thenReturn(book);
 		
